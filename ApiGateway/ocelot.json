@@ -24,14 +24,14 @@
           "Port": 8080
         }
       ],
-      "DownstreamPathTemplate": "/api/Customer"//,
-      //"AuthenticationOptions": {
-      //  "AuthenticationProviderKey": "Bearer",
-      //  "AllowedScopes": []
-      //},
-      //"RouteClaimsRequirement": {
-      //  "Role": "Administrator"
-      //}
+      "DownstreamPathTemplate": "/api/Customer",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Administrator"
+      }
     },
     {
       "UpstreamPathTemplate": "/api/Customer/{customerId}",
@@ -57,7 +57,7 @@
           "Port": 8080
         }
       ],
-      "DownstreamPathTemplate": "/api/Product" //,
+      "DownstreamPathTemplate": "/api/Product"//,
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer",
       //  "AllowedScopes": []

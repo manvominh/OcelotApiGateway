@@ -17,7 +17,7 @@ namespace CustomerWebApi.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public ActionResult<IEnumerable<Customer>> GetCustomers()
         {
             return _customerDbContext.Customers;
@@ -31,7 +31,7 @@ namespace CustomerWebApi.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         public async Task<ActionResult> Create(Customer customer)
         {
             await _customerDbContext.Customers.AddAsync(customer);
@@ -40,7 +40,7 @@ namespace CustomerWebApi.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "Administrator,User")]
+        //[Authorize(Roles = "Administrator,User")]
         public async Task<ActionResult> Update(Customer customer)
         {
             _customerDbContext.Customers.Update(customer);

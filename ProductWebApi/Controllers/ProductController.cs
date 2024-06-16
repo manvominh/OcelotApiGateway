@@ -31,7 +31,7 @@ namespace ProductWebApi.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> Create(Product product)
         {
             await _dbContext.Products.AddAsync(product);
@@ -40,7 +40,7 @@ namespace ProductWebApi.Controllers
         }
 
         [HttpPut]
-        //[Authorize(Roles = "Administrator,User")]
+        [Authorize(Roles = "Administrator,User")]
         public async Task<ActionResult> Update(Product product)
         {
             _dbContext.Products.Update(product);
