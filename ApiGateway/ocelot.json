@@ -16,7 +16,7 @@
     // Customer Web API
     {
       "UpstreamPathTemplate": "/api/Customer",
-      "UpstreamHttpMethod": [ "Get", "Put" ],
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -25,39 +25,39 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Customer",
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": []
+      //},
       //"AddHeadersToRequest": {
       //  "claims_roles":  "Claims[Role] > value > |"
       //},
-      "RouteClaimsRequirement": {
-        "Role": [ "Administrator", "User" ]
-      }
+      //"RouteClaimsRequirement": {
+      //  "role": [ "Administrator" ]
+      //}
     },
-    {
-      "UpstreamPathTemplate": "/api/Customer",
-      "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "customerwebapi",
-          "Port": 8080
-        }
-      ],
-      "DownstreamPathTemplate": "/api/Customer",
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-        "AllowedScopes": []
-      },
-      //"AddHeadersToRequest": {
-      //  "claims_roles":  "Claims[Role] > value > |"
-      //},
-      "RouteClaimsRequirement": {
-        "Role": "Administrator"
-      }
-    },
+    //{
+    //  "UpstreamPathTemplate": "/api/Customer",
+    //  "UpstreamHttpMethod": [ "Post" ],
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "customerwebapi",
+    //      "Port": 8080
+    //    }
+    //  ],
+    //  "DownstreamPathTemplate": "/api/Customer",
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "Bearer",
+    //    "AllowedScopes": []
+    //  },
+    //  //"AddHeadersToRequest": {
+    //  //  "claims_roles":  "Claims[Role] > value > |"
+    //  //},
+    //  "RouteClaimsRequirement": {
+    //    "role": "Administrator"
+    //  }
+    //},
     {
       "UpstreamPathTemplate": "/api/Customer/{customerId}",
       "UpstreamHttpMethod": [ "Get", "Delete" ],
