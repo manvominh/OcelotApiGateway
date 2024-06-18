@@ -25,39 +25,17 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Customer",
-      //"AuthenticationOptions": {
-      //  "AuthenticationProviderKey": "Bearer",
-      //  "AllowedScopes": []
-      //},
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
       //"AddHeadersToRequest": {
       //  "claims_roles":  "Claims[Role] > value > |"
       //},
-      //"RouteClaimsRequirement": {
-      //  "role": [ "Administrator" ]
-      //}
-    },
-    //{
-    //  "UpstreamPathTemplate": "/api/Customer",
-    //  "UpstreamHttpMethod": [ "Post" ],
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "customerwebapi",
-    //      "Port": 8080
-    //    }
-    //  ],
-    //  "DownstreamPathTemplate": "/api/Customer",
-    //  "AuthenticationOptions": {
-    //    "AuthenticationProviderKey": "Bearer",
-    //    "AllowedScopes": []
-    //  },
-    //  //"AddHeadersToRequest": {
-    //  //  "claims_roles":  "Claims[Role] > value > |"
-    //  //},
-    //  "RouteClaimsRequirement": {
-    //    "role": "Administrator"
-    //  }
-    //},
+      "RouteClaimsRequirement": {
+        "role": "Administrator"
+      }
+    },    
     {
       "UpstreamPathTemplate": "/api/Customer/{customerId}",
       "UpstreamHttpMethod": [ "Get", "Delete" ],
@@ -82,7 +60,7 @@
           "Port": 8080
         }
       ],
-      "DownstreamPathTemplate": "/api/Product"
+      "DownstreamPathTemplate": "/api/Product" 
     },
     {
       "UpstreamPathTemplate": "/api/Product/{productId}",

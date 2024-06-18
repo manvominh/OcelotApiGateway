@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CustomerWebApi.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(Roles = "Administrator")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
